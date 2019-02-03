@@ -1,5 +1,10 @@
 
 import React from 'react'
+import styled from 'styled-components'
+
+const Card = styled.div`
+  width: 100% !important;
+`;
 
 const CurrentVideo = ({ video }) => {
   if (!video) {
@@ -10,7 +15,7 @@ const CurrentVideo = ({ video }) => {
     );
   }
   return(
-    <div className="ui card">
+    <Card className="ui card">
       <div className="image">
         <img alt="Description" src={video.snippet.thumbnails.high.url} />
       </div>
@@ -29,7 +34,7 @@ const CurrentVideo = ({ video }) => {
           22 Friends
         </a>
       </div>
-    </div>
+    </Card>
   )
 }
 export default CurrentVideo
