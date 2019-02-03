@@ -28,11 +28,11 @@ export default class App extends React.Component {
     return (
       <div>
         < SearchBar onFormSubmit={this.onTermSubmit} />
-        <div className="ui grid">
-          <div className="eight wide column">
+        <div className="ui two column doubling stackable grid container">
+          <div className="eleven wide column">
             < CurrentVideo video = {this.state.selectedVideo} />
           </div>
-          <div className="eight wide column">
+          <div className="five wide column">
             < VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
           </div>
         </div>

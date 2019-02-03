@@ -1,5 +1,15 @@
 import React from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
+
+
+const SearchCustom = styled.div`
+  text-align: center;
+
+  .form .input{
+    width: 100%;
+  }
+`
 
 export default class SearchBar extends React.Component {
   constructor(props) {
@@ -19,7 +29,7 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <SearchCustom>
         <form className="ui form" onSubmit={this.onFormSubmit}>
           <div className="ui right icon input loading">
             <input
@@ -31,7 +41,7 @@ export default class SearchBar extends React.Component {
             <i className="search icon"></i>
           </div>
         </form>
-      </div>
+      </SearchCustom>
     )
   }
 }
